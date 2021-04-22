@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo -e " please enter your subnet  like 192.168.1  \n\n"
+
+read subnet
+
+for ip in $(seq 1 254);do
+    ping -c 1 $subnet.$ip
+done
