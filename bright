@@ -1,0 +1,5 @@
+#!/bin/bash
+
+bt=$(echo " " | rofi -dmenu -p "Brightness level : ")
+
+brightnessctl -d amdgpu_bl1 set " $bt%"

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+curl -L -s 'https://redirect1.bbportal.bsnl.co.in/portal/fetchUserQuotaPM.do' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'Accept-Language: en-US,en;q=0.5' --compressed -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' -H 'X-Requested-With: XMLHttpRequest' -H 'Origin: https://redirect1.bbportal.bsnl.co.in' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Referer: https://redirect1.bbportal.bsnl.co.in/portal/' -H 'Cookie: JSESSIONID=1AA3D5A5049520175E3F4C8C909E5FA5; JsessionID=AVI6ay5mHqxwDONp8SawEQ$$' --data-raw 'location=BGL&actionName=manual&_search=false&nd=1620055175994&rows=4&page=1&sidx=&sord=asc' > data.txt
+
+datas=$(cat data.txt | cut -d : -f8 | cut -d '"' -f2)
+
+notify-send -c critical $datas

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+xrandr --output eDP --brightness 0.7
+
+doas brightnessctl --device='asus::kbd_backlight' set 0 > /dev/null
+
+feh --recursive --randomize --bg-fill /home/goku/Downloads/wall/*

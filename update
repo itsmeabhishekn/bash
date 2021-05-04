@@ -1,0 +1,5 @@
+#!/bin/bash
+
+update=$(doas pacman -Syu & sleep 5& n >/tmp/up.txt &cat /tmp/up.txt | grep Download | cut -d ' ' -f 2-6)
+
+notify-send  $update

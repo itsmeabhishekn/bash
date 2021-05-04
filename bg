@@ -1,0 +1,11 @@
+#!/bin/bash
+
+while :
+
+do
+
+	feh --recursive --randomize --bg-fill /home/goku/Downloads/wall/*
+
+	sleep 120
+
+done

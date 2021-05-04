@@ -1,0 +1,5 @@
+#!/bin/bash
+
+vid=$(echo " " | rofi -dmenu -p "search : ")
+
+ytfzf -t " $vid "

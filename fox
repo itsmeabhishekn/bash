@@ -1,0 +1,5 @@
+!#/bin/bash
+
+term=$(echo " " | dmenu -p "search here.. ! :")
+
+firefox --new-tab  --search "  $term  "
