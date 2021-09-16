@@ -1,0 +1,20 @@
+#!/bin/bash
+
+charge=$(acpi -b | awk -F'[,:%]' '{print $2, $3}' | cut -d "g" -f3) 
+
+message=" Power Level : ${charge} "
+
+ram=$(neofetch | grep Memory | cut -d " " -f2)
+
+ramusg="Ram usage : ${ram}"
+
+times=$(curl -L https://time.is/ | grep automatically | grep JavaScript | cut -d ">" -f18 | cut -d "<" -f1)
+
+
+
+ notify-send -c critical " $message "
+
+ notify-send -c critical "  $ramusg  "
+
+
+notify-send  -c critic  "Time : $times"
